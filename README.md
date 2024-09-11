@@ -29,6 +29,24 @@ This project is a web application developed using ASP.NET Core Razor Pages. It a
 - `wwwroot/` - Contains static files like CSS, JavaScript, and images.
   - `css/` - Stylesheets.
   - `js/` - JavaScript files.
+ 
+## Prerequisites
+
+Before setting up and running this project, ensure that you have the following software and packages installed:
+
+### Software
+- **Visual Studio** - To build and run the .NET project.
+- **SQL Server** - To host the database.
+- **SSMS (SQL Server Management Studio)** - Optional, but recommended for managing your SQL Server database.
+
+### NuGet Packages
+- **Microsoft.EntityFrameworkCore** - For interacting with the database through Entity Framework Core.
+- **Microsoft.EntityFrameworkCore.SqlServer** - For connecting Entity Framework Core to SQL Server.
+- **Microsoft.EntityFrameworkCore.Tools** - For running migrations and scaffolding from the command line in Visual Studio.
+
+### Additional Requirements
+- A working SQL Server instance to run the database for the project.
+- The connection string in the `appsettings.json` file should point to your SQL Server instance and database.
 
 ## Project Setup
 
