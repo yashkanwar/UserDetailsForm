@@ -1,0 +1,65 @@
+﻿@page
+@model UserDetailsForm.Pages.AboutModel
+@{
+    ViewData["Title"] = "About Me";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<div class="about-container">
+    <section class="about-me">
+        <p>Hello! I am Yash Kanwar, a passionate AI and Machine Learning engineer with a BE in Artificial Intelligence and Machine Learning. I have recently completed my studies and am currently seeking opportunities in the field of AI/ML where I can apply my skills and contribute to innovative projects.</p>
+
+        <h4>Skills & Expertise</h4>
+        <ul>
+            <li>Proficient in web development technologies including Python, Java, HTML, CSS, JavaScript, and SQL</li>
+            <li>Experience in building web applications with a focus on user-friendly interfaces and robust back-end functionality</li>
+            <li>Notable projects include a Laptop Price Predictor, a Sign Language Detection System, and a Tourism Website</li>
+            <li>Strong problem-solving skills with an emphasis on creating efficient and scalable solutions</li>
+        </ul>
+
+        <h4>Contact Me</h4>
+        <p>If you would like to connect with me or discuss potential opportunities, please feel free to reach out through the following:</p>
+        <ul>
+            <li>Email: yashkanwar20@gmail.com</li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/yash-kanwar-801089192/" target="_blank">linkedin.com/in/yash-kanwar-801089192</a></li>
+            <li>GitHub: <a href="https://github.com/YashKanwar" target="_blank">github.com/YashKanwar</a></li>
+            <li>Leetcode: <a href="https://leetcode.com/u/yashkanwar20/" target="_blank">leetcode.com/u/yashkanwar20</a></li>
+
+        </ul>
+    </section>
+</div>
+
+ <style>
+     h2{
+         text-align: center;
+     }
+    .about-container {
+        max-width: 800px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .about-me h3 {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+
+    .about-me ul {
+        list-style-type: disc;
+        padding-left: 20px;
+    }
+
+    .about-me li {
+        margin-bottom: 10px;
+    }
+
+    .about-me a {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+    .about-me a:hover {
+        text-decoration: underline;
+    }
+</style>

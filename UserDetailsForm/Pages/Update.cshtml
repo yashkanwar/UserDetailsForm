@@ -1,0 +1,74 @@
+﻿@page "{id:int}"
+@model UserDetailsForm.Pages.UpdateModel
+@{
+    ViewData["Title"] = "Update User Details";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form method="post">
+    <!-- Hidden input for the UserDetails.Id -->
+    <input type="hidden" name="UserDetails.Id" value="@Model.UserDetails.Id" />
+
+    <div class="form-row">
+        <div class="form-group">
+            <label for="FirstName">First Name</label>
+            <input type="text" id="FirstName" name="UserDetails.FirstName" class="form-control capitalize-first-letter" value="@Model.UserDetails.FirstName" />
+            <span asp-validation-for="UserDetails.FirstName" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="MiddleName">Middle Name</label>
+            <input type="text" id="MiddleName" name="UserDetails.MiddleName" class="form-control capitalize-first-letter" value="@Model.UserDetails.MiddleName" />
+            <span asp-validation-for="UserDetails.MiddleName" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="LastName">Last Name</label>
+            <input type="text" id="LastName" name="UserDetails.LastName" class="form-control capitalize-first-letter" value="@Model.UserDetails.LastName" />
+            <span asp-validation-for="UserDetails.LastName" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="Email">Email</label>
+        <input type="email" id="Email" name="UserDetails.Email" class="form-control" value="@Model.UserDetails.Email" />
+        <span asp-validation-for="UserDetails.Email" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="DateOfBirth">Date of Birth</label>
+        <input type="date" id="DateOfBirth" name="UserDetails.DOB" class="form-control" value="@Model.UserDetails.DOB.ToString("yyyy-MM-dd")" />
+        <span asp-validation-for="UserDetails.DOB" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="State">State</label>
+        <select id="State" name="UserDetails.State" class="form-control" data-city-value="@Model.UserDetails.City">
+            <!-- Set the selected state -->
+            <option value="@Model.UserDetails.State" selected>@Model.UserDetails.State</option>
+            @foreach (var state in Model.GetAvailableStates())
+            {
+                <!-- Avoid displaying the already selected state again -->
+                @if (state != Model.UserDetails.State)
+                {
+                    <option value="@state">@state</option>
+                }
+            }
+        </select>
+        <span asp-validation-for="UserDetails.State" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="City">City</label>
+        <select id="City" name="UserDetails.City" class="form-control">
+            <!-- Initial city options will be populated by JavaScript -->
+            <option value="">Select City</option>
+        </select>
+        <span asp-validation-for="UserDetails.City" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+</form>
+
+<script src="~/js/update.js"></script>

@@ -1,0 +1,75 @@
+﻿@page
+@model UserDetailsForm.Pages.InsertModel
+@{
+    ViewData["Title"] = "Insert User Details";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+@if (TempData["InsertMessage"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["InsertMessage"]
+    </div>
+    
+}
+
+<form method="post">
+    <div class="form-row">
+        <div class="form-group">
+            <label for="FirstName">First Name</label>
+            <input type="text" id="FirstName" name="UserDetails.FirstName" class="form-control capitalize-first-letter" />
+            <span asp-validation-for="UserDetails.FirstName" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label for="MiddleName">Middle Name</label>
+            <input type="text" id="MiddleName" name="UserDetails.MiddleName" class="form-control capitalize-first-letter" />
+            <span asp-validation-for="UserDetails.MiddleName" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label for="LastName">Last Name</label>
+            <input type="text" id="LastName" name="UserDetails.LastName" class="form-control capitalize-first-letter" />
+            <span asp-validation-for="UserDetails.LastName" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="Email">Email</label>
+        <input type="email" id="Email" name="UserDetails.Email" class="form-control" />
+        <span asp-validation-for="UserDetails.Email" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="DateOfBirth">Date of Birth</label>
+        <input type="date" id="DateOfBirth" name="UserDetails.DOB" class="form-control" />
+        <span asp-validation-for="UserDetails.DOB" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="State">State</label>
+        <select id="State" name="UserDetails.State" class="form-control">
+            <option value="">Select State</option>
+            <option value="Maharashtra">Maharashtra</option>
+            <option value="Gujrat">Gujrat</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Punjab">Punjab</option>
+            <option value="West Bengal">West Bengal</option>
+            <option value="Karnataka">Karnataka</option>
+            <!-- Add more options as needed -->
+        </select>
+        <span asp-validation-for="UserDetails.State" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="City">City</label>
+        <select id="City" name="UserDetails.City" class="form-control">
+            <option value="">Select City</option>
+            <!-- Cities will be populated dynamically -->
+        </select>
+        <span asp-validation-for="UserDetails.City" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+<script src="~/js/insert.js"></script>
+
