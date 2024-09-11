@@ -75,7 +75,7 @@ To set up the database for this project, follow these steps:
 3. Update Connection String in your appsettings.json file:
 ```
 "ConnectionStrings": {
-    "CRUDAPPContext": "Server=localhost;Database=UserDetailsDb;Trusted_Connection=True;TrustServerCertificate=True;"
+    "DefaultConnection": "Server=localhost;Database=UserDetailsDb;Trusted_Connection=True;TrustServerCertificate=True;"
 }
 ```
 4. ApplicationDbContext.cs
