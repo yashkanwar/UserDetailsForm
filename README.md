@@ -16,11 +16,11 @@ This project is a web application developed using ASP.NET Core Razor Pages. It a
 ## Project Structure
 
 - `Pages/` - Contains the Razor Pages for various functionalities.
-  - `About.cshtml` - About page.
   - `Index.cshtml` - Home page displaying user entries.
   - `Insert.cshtml` - Page for inserting new users.
   - `Update.cshtml` - Page for updating existing users.
-- `Delete.cshtml.cs` - Handles the backend logic for deleting user details.
+  - `Delete.cshtml.cs` - Handles the backend logic for deleting user details.
+  - `About.cshtml` - About page.
   - `Shared/` - Contains shared layout and validation scripts.
 - `Models/` - Contains the data models.
   - `UserDetails.cs` - Model for user details.
